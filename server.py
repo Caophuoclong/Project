@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return "Long"
-@app.route('/webhook', methods=["GET","POST"])
+@app.route('/webhooks', methods=["GET","POST"])
 def handle_message():
     '''
     Handle messages sent by facebook messenger to the applicaiton
@@ -39,5 +39,7 @@ def sendmessage(sender_id,message_text):
         "message": {"text": message_text}}))
 
 
+
+
 if __name__ == "__main__":
-    app.run(port=1203,debug=True)
+    app.run()
