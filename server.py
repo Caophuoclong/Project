@@ -25,11 +25,11 @@ def handle_message():
                         recipient_id = messaging_event["recipient"]["id"]  
                         message_text = messaging_event["message"]["text"]
                         print(message_text)
-                        sendmessage(sender_id,"Long dep trai")  
+                        sendmessage(sender_id,"xin chao ban")  
         return "ok"
 
 def sendmessage(sender_id,message_text):
-    token_access = "EAAHPTZBQbRLABAAi5UKcZA0WxPAPmTI0cjiQBiRRtt5fFTR4S0Dyex8QrFXWuJAZBSL8nnPA3a8ZBkOhuIOjyIaOiVOL2Pcx4JNC15PXgz17R8RnnCrC8wzDtW0cga6M7AjaPdZC0xTbLIisvjZATGsvw65v6kJSZA9kTgcp5Kgskqy8Kk4O1fz"
+    token_access = "EAAHPTZBQbRLABADvmQstndkAVWEFxfW8eQMNeqgdbq0nnuy1HUlDdUunpe9lRKHBYA5x3tvSeozIJmA7h8uPGGfFkjhzZBxPV63LlNmIBYCz9EFhgXeZAbtwZCjAyevZCfAZBvg626c3sdljWBCKRimk9O9TVwIa6TUf45wyZB1DYCzc2e13x7x"
     url = "https://graph.facebook.com/v2.6/me/messages"
     x = requests.request("POST",url,
     params={"access_token" : token_access},
