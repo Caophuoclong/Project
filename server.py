@@ -39,7 +39,8 @@ def sendmessage(sender_id,message_text):
         "message": {"text": message_text}}))
 
 
-
-
+@app.route("/tkb")
+def tkb():
+    return render_template("tkb.html")
 if __name__ == "__main__":
     app.run()
